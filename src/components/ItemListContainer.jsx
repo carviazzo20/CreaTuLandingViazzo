@@ -1,18 +1,11 @@
-// src/components/ItemListContainer.jsx
+import React from 'react';
+
 function ItemListContainer({ greeting }) {
-    return (
-      <section style={styles.container}>
-        <h2>{greeting}</h2>
-      </section>
-    );
-  }
-  
-  const styles = {
-    container: {
-      padding: "2rem",
-      textAlign: "center",
-    },
-  };
-  
-  export default ItemListContainer;
-  
+  return (
+    <section style={{ width: '100%', textAlign: 'center' }}>
+      <h2>{greeting}</h2>
+    </section>
+  );
+}
+
+export default ItemListContainer;

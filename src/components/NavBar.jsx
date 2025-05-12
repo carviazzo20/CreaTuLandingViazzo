@@ -1,37 +1,25 @@
-// src/components/NavBar.jsx
-import CartWidget from "./CartWidget";
+import React from 'react';
+import CartWidget from './CartWidget';
+import './NavBar.css';
 
 function NavBar() {
   return (
-    <nav style={styles.nav}>
-      <h1 style={styles.logo}>MiTienda</h1>
-      <ul style={styles.navLinks}>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="#">Productos</a></li>
-        <li><a href="#">Contacto</a></li>
-      </ul>
-      <CartWidget />
+    <nav className="navbar">
+      <div className="navbar-logo">
+        <h1>MiTienda</h1>
+      </div>
+      <div className="navbar-links">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+      <div className="navbar-cart">
+        <CartWidget />
+      </div>
     </nav>
   );
 }
-
-const styles = {
-  nav: {
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    padding: "1rem",
-    backgroundColor: "#eee",
-  },
-  logo: {
-    fontSize: "1.5rem",
-    fontWeight: "bold",
-  },
-  navLinks: {
-    listStyle: "none",
-    display: "flex",
-    gap: "1rem",
-  },
-};
 
 export default NavBar;
